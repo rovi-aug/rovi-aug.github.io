@@ -8,18 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RoVi-Aug: Robot and Viewpoint Augmentation for Cross-Embodiment Robot Learning</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL806BD0W9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-PYVRSFMDRL');
+    gtag('config', 'G-QL806BD0W9');
   </script>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
@@ -53,17 +49,6 @@
       }
   </style>
 </head>
-
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0RJ1GX4S9L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0RJ1GX4S9L');
-</script>
 
 
 
@@ -232,20 +217,21 @@
 
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3"><br>RoVi-Aug Pipeline</h2>
-        <div class="hero-body">
-          <figure>
-            <img id="teaser" src="./static/images/Method-cropped-2.png" alt="robots image" style="width: 100%;">
-            <figcaption>
-            Overview of the RoVi-Aug pipeline. Given an input robot image, we first segment the robot out using a finetuned SAM model, then use a ControlNet to transform the robot into another robot. After pasting the synthetic robot back into the background, we use ZeroNVS to generate novel views.
-            </figcaption>
-          </figure>
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3"><br>RoVi-Aug Pipeline</h2>
+          <div class="hero-body">
+            <figure>
+              <img id="teaser" src="./static/images/Method-cropped-2.png" alt="robots image" style="width: 100%;">
+              <figcaption>
+              Overview of the RoVi-Aug pipeline. Given an input robot image, we first segment the robot out using a finetuned SAM model, then use a ControlNet to transform the robot into another robot. After pasting the synthetic robot back into the background, we use ZeroNVS to generate novel views.
+              </figcaption>
+            </figure>
+          </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -465,7 +451,7 @@
           <figure>
             <img id="teaser" src="./static/images/cross-skill-cross-robot.png" alt="sim experiments Image" style="width: 100%;">
             <figcaption>
-             Cross-skill-cross-robot experiment results and Octo Finetuning OXE experiment results.
+             Robot-skill cross-product and Octo finetuning OXE experiment results.
             </figcaption>
           </figure>
         </div>
