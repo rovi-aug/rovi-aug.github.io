@@ -84,8 +84,7 @@
                 <a href="https://www.chenfengx.com">Chenfeng Xu*</a><sup>1</sup>,
               </span>
             <span class="author-block">
-              <a href="https://kdharmarajan.com/">Karthik Dharmarajan</a><sup>1</sup>,</span>
-            
+              <a href="https://kdharmarajan.com/">Karthik Dharmarajan</a><sup>1</sup>,</span>            
             <span class="author-block">
               <a href="https://zubairirshad.com">Zubair Irshad</a><sup>2</sup>,
             </span>
@@ -115,6 +114,11 @@
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>* Equal Contribution</span>
           </div>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><b>CoRL 2024 (Oral)</b></span>
+          </div>
+
 
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -173,9 +177,9 @@
       <img id="teaser" src="./static/images/teaser-cropped.png" alt="Teaser Image" style="width: 100%;">
       <h2 class="subtitle has-text-centered">
         <p>We study <b>cross-embodiment transfer for vision-based policies</b> without known camera poses and robot configurations.
-        Assume there are some video data for one kind of robot (left) and we want to leverage these data into other kinds of robots,
-          RoVi-Aug cross-paints the robots (right) and synthesizes the novel view to cater to the test scenarios. 
-          <b>RoVi-Aug can zero-shot depoly on a different robot with significantly different camera angles and enables transfer between Robots and skills via multi-robot-multi-task learning.</b>
+          Given robot images (left), RoVi-Aug uses state-of-the-art diffusion models to augment the data and generate
+          synthetic images with different robots and viewpoints (right). 
+          <b>RoVi-Aug can zero-shot depoly on a different robot with significantly different camera angles and enables transfer between robots and skills via multi-robot multi-task learning.</b>
     
       </h2>
     </div>
@@ -188,9 +192,9 @@
 
 
 
-<section class="section">
+<!--/ Abstract. -->
+<!-- <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
@@ -210,13 +214,12 @@
           
         </div>
       </div>
-    </div>
-    <!--/ Abstract. -->
+    </div> -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
+        <h2 class="title is-3">Summary Video</h2>
         <div class="">
           <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/video.mp4" type="video/mp4">
@@ -224,9 +227,8 @@
         </div>
       </div>
     </div>
-    <!--/ Paper video. -->
   </div>
-</section>
+</section> -->
 
 
 
@@ -250,6 +252,21 @@
   </div>
 </section>
 
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop"> <!-- Wrap the entire content in is-max-desktop container -->
+      <h2 class="title is-4"> RoVi-Aug Examples </h2>
+        <div class="content has-text-centered">
+          <figure>
+            <img id="teaser" src="./static/images/augmentation_examples.png" alt="sim experiments Image" style="width: 100%;">
+            <figcaption>
+              Some example images of applying robot augmentation (middle) and view augmentation (right).
+            </figcaption>
+          </figure>
+        </div>
+  </div>
+</section>
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -302,7 +319,7 @@
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container is-max-desktop"> <!-- Wrap the entire content in is-max-desktop container -->
-      <h2 class="title is-4"> Results for Same Camera Pose</h2>
+      <h2 class="title is-4"> Results for the Same Camera Pose</h2>
         <div class="content has-text-justified">
           <p>
             We first investigate the zero-shot transfer between Franka and UR5 given the same camera pose. The performance and the visualization results are shown below.
@@ -374,7 +391,7 @@
       <section class="hero is-light is-small">
         <div class="hero-body">
           <div class="container is-max-desktop"> <!-- Wrap the entire content in is-max-desktop container -->
-            <h2 class="title is-4"> Results for Different Camera Pose</h2>
+            <h2 class="title is-4"> Results for Different Camera Poses</h2>
               <div class="content has-text-justified">
                 <p>
                  We then conduct experiments on the zero-shot transfer when the camera poses are different.
@@ -462,20 +479,7 @@
 </div>
 </section>
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop"> <!-- Wrap the entire content in is-max-desktop container -->
-      <h2 class="title is-4"> Visualization for robot cross-painting and Novel-view synthesize </h2>
-        <div class="content has-text-centered">
-          <figure>
-            <img id="teaser" src="./static/images/augmentation_examples.png" alt="sim experiments Image" style="width: 100%;">
-            <figcaption>
-              We show the intermediate results of the robot cross-painting and the view augmentation results.
-            </figcaption>
-          </figure>
-        </div>
-</div>
-</section>
+
 
 </section>
 
