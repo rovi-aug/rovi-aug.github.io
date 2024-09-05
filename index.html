@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="RoVi-Aug: Robot and Viewpoint Augmentation for Cross-Embodiment Robot Learning">
+  <meta name="keywords" content="Cross-Embodiment, Robot and View Augmentation, Robotics">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RoVi-Aug: Robot and Viewpoint Augmentation for Cross-Embodiment Robot Learning</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" type="image/png" href="./static/images/mirage_icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Captions</title>
+  <style>
+      .video-caption {
+        text-align: center;
+        margin-top: 8px;
+        font-size: 14px;
+        color: #333;
+      }
+  </style>
+</head>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0RJ1GX4S9L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0RJ1GX4S9L');
+</script>
+
+
+
+  
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">RoVi-Aug: Robot and Viewpoint Augmentation for Cross-Embodiment Robot Learning</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yunliangchen.github.io">Lawrence Yunliang Chen*</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.chenfengx.com">Chenfeng Xu*</a><sup>1</sup>,
+              </span>
+            <span class="author-block">
+              <a href="https://kdharmarajan.com/">Karthik Dharmarajan</a><sup>1</sup>,</span>
+            
+            <span class="author-block">
+              <a href="https://zubairirshad.com">Zubair Irshad</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://rcheng805.github.io">Richard Cheng</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=ID9QePIAAAAJ&hl=en">Kurt Keutzer</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://me.berkeley.edu/people/masayoshi-tomizuka/">Masayoshi Tomizuka</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://quanvuong.github.io">Quan Vuong</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://goldberg.berkeley.edu">Ken Goldberg</a><sup>1</sup>,
+            </span>
+            
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of California, Berkeley,</span>
+            <span class="author-block"><sup>2</sup>Toyota Research Institute,</span>
+            <span class="author-block"><sup>3</sup>Physical Intelligence</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>* Equal Contribution</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=" "
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- <span class="link-block">
+                <a href=" "
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href=" "
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=" "
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero body">
+      <img id="teaser" src="./static/images/teaser-cropped.png" alt="Teaser Image" style="width: 100%;">
+      <h2 class="subtitle has-text-centered">
+        <p>We study <b>cross-embodiment transfer for vision-based policies</b> without known camera poses and robot configurations.
+        Assume there are some video data for one kind of robot (left) and we want to leverage these data into other kinds of robots,
+          RoVi-Aug cross-paints the robots (right) and synthesizes the novel view to cater to the test scenarios. 
+          <b>RoVi-Aug can zero-shot depoly on a different robot with significantly different camera angles and enables transfer between Robots and skills via multi-robot-multi-task learning.</b>
+    
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          Scaling up robot learning requires large and diverse datasets, and how to efficiently reuse collected data and transfer policies to new embodiments remains an open question.
+          <p>
+          <p>
+          Emerging research such as the Open-X Embodiment (OXE) project have shown promise in leveraging skills by combining datasets including different robots. However, imbalances in the distribution of robot types and camera angles in many datasets make policies prone to overfit. 
+          <p>
+          <p>
+          To mitigate this issue, we propose RoVi-Aug, which leverages state-of-the-art image-to-image generative models to augment robot data by synthesizing demonstrations with different robots and camera views. 
+          <p>
+          <p>
+          Through extensive physical experiments, we show that, by training on robot- and viewpoint-augmented data, RoVi-Aug can zero-shot deploy on a different robot with significantly different camera angles. Compared to test-time adaptation algorithms such as Mirage, RoVi-Aug requires no extra processing at test time, does not assume known camera angles, and allows policy fine-tuning. Furthermore, by co-training on original and augmented robot datasets, RoVi-Aug can learn multi-robot and multi-task policies, allowing transfer between robots and skills. In addition, we find that applying RoVi-Aug to OXE datasets improves fine-tuned policy performance by up to 30%.
+          <p>  
+          
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/video.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <!-- A Simulation Study -->
+        <h2 class="title is-3">RoVi-Aug Pipeline</h2>
+        <div class="hero-body">
+          <figure>
+            <img id="teaser" src="./static/images/Method-cropped-2.png" alt="robots image" style="width: 100%;">
+            <figcaption>
+            Overview of the RoVi-Aug pipeline. Given an input robot image, we first segment the robot out using a finetuned SAM model, then use a ControlNet to transform the robot into another robot. After pasting the synthetic robot back into the background, we use ZeroNVS to generate novel views.
+            </figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Physical Experiments</h2>
+    <div class="content has-text-justified">
+      <p>
+        We design experiments to answer the following research questions: (1) Can robot augmentation (Ro-Aug) effectively bridge the visual gap between the robots? (2) Can viewpoint augmentation (Vi-Aug) improve policy robustness to camera pose changes? (3) Can policies trained with RoVi-Aug be successfully deployed zero-shot on a different robot with camera changes? (4) Does RoVi-Aug enable multi-robot multi-task training and better facilitate transfer between robots and skills?
+      </p>
+    </div>
+    <div class="content has-text-centered">
+      <figure>
+        <img id="teaser" src="./static/images/tasks_v2.png" alt="sim experiments Image" style="width: 100%;">
+        <figcaption>
+          Tasks used for evaluation. For each task, on the left is an example training view and robot, and on the right is the different test-time embodiment. 
+        </figcaption>
+      </figure>
+    </div>
+    <div class="content has-text-justified">
+      <p>
+        To answer the first three questions, we study policy transfer between a Franka and a UR5 robot on 5 tasks (Fig. 3): (1) Open a drawer, (2) Pick up a toy tiger from the table and put it into a bowl (Place Tiger), (3) Stack cups, (4) Sweep cloth from right to left, and (5) Transport a toy tiger between two bowls.
+    </div>
+  </div>
+</section>
+
+<style>
+  .results-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* This will space out the items evenly */
+  }
+
+  .item {
+    flex-basis: 100%; /* This ensures two items per row, allowing for some margin */
+    margin-bottom: 20px; /* Space between rows of items */
+  }
+
+  .video-caption {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+  }
+
+  video {
+    width: 100%; /* This ensures the video takes up the full width of the item container */
+    height: 80%; /* This keeps the aspect ratio of the video */
+  }
+</style>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop"> <!-- Wrap the entire content in is-max-desktop container -->
+      <h2 class="title is-4"> Results for Same Camera Pose</h2>
+        <div class="content has-text-justified">
+          <p>
+            We first investigate the zero-shot transfer between Franka and UR5 given the same camera pose. The performance and the visualization results are shown below.
+          </p>
+        </div>
+
+        <div class="content has-text-centered">
+          <figure>
+            <img id="teaser" src="./static/images/same_pose_result.png" alt="sim experiments Image" style="width: 100%;">
+            <figcaption>
+              Zero-shot physical experiments evaluating robot augmentation. We evaluate Ro-Aug on 5 tasks in 2 settings with 10 trials each: Learning a policy using Franka demonstration data and evaluating on a UR5, and vice versa. The camera poses are the same. 
+            </figcaption>
+          </figure>
+        </div>
+      <!-- Row for the Lift Task with Different Robot and Same Gripper -->
+      <h2 class="title is-5">Place Tiger</h2>
+      <div class="columns is-multiline">
+        <!-- Video item for UR5e with Franka Gripper -->
+        <div class="column is-half">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/pysical-experiment/same-camera-view/source-demonstration/tiger_franka_0.mp4" type="video/mp4">
+          </video>
+          <p class="video-caption">Source Demonstration (Franka Robot)</p>
+        </div>
+        <!-- Video item for Kinova3 with Franka Gripper -->
+        <div class="column is-half">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/pysical-experiment/same-camera-view/target-result/tiger_ur5_success.mp4" type="video/mp4">
+          </video>
+          <p class="video-caption">Target Result (UR5 robot)</p>
+        </div>
+      </div>
+      <!-- Row for the Stack Task with Different Robot and Different Gripper -->
+      <h2 class="title is-5">Open Drawer</h2>
+      <div class="columns is-multiline">
+        <div class="column is-half">
+          <video poster="" id="toby-stack-ur5e" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/pysical-experiment/same-camera-view/source-demonstration/drawer_franka_0.mp4" type="video/mp4">
+          </video>
+          <p class="video-caption">Source Demonstration (Franka robot)</p>
+        </div>
+        <div class="column is-half">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/pysical-experiment/same-camera-view/target-result/drawer_ur5_success.mp4" type="video/mp4">
+          </video>
+          <p class="video-caption">Target Result (UR5 robot)</p>
+        </div>
+      </div>
+      <!-- Row for the Can Task with Different Robot and Same Gripper -->
+      <h2 class="title is-5">Stack Cup</h2>
+      <div class="columns is-multiline">
+        <!-- Video item for UR5e with Franka Gripper -->
+        <div class="column is-half">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/pysical-experiment/same-camera-view/source-demonstration/cup_franka_1.mp4" type="video/mp4">
+          </video>
+          <p class="video-caption">Source Demonstration (Franka robot)</p>
+        </div>
+        <!-- Video item for Kinova3 with Franka Gripper -->
+        <div class="column is-half">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/pysical-experiment/same-camera-view/target-result/cup_ur5_success.mp4" type="video/mp4">
+          </video>
+          <p class="video-caption">Target Result (UR5 robot)</p>
+        </div>
+     </div>
+    </section>
+
+      <section class="hero is-light is-small">
+        <div class="hero-body">
+          <div class="container is-max-desktop"> <!-- Wrap the entire content in is-max-desktop container -->
+            <h2 class="title is-4"> Results for Different Camera Pose</h2>
+              <div class="content has-text-justified">
+                <p>
+                 We then conduct experiments on the zero-shot transfer when the camera poses are different.
+                </p>
+              </div>
+      
+              <div class="content has-text-centered">
+                <figure>
+                  <img id="teaser" src="./static/images/different-camera-pose.png" alt="sim experiments Image" style="width: 100%;">
+                  <figcaption>
+                    The translation and rotation shows the difference in the camera poses between the robots. Mirage uses a policy trained on only the source robot with a test-time cross-painting procedure and depth reprojection to account for camera pose changes. Ro-Aug only applies robot augmentation while RoVi-Aug applies both robot and viewpoint augmentation. For both Ro-Aug and RoVi-Aug, the policy is trained on the augmented data and deployed on the target robot zero-shot.
+                  </figcaption>
+                </figure>
+              </div>
+            
+           <!-- Row for the Lift Task with Different Robot and Same Gripper -->
+          <h2 class="title is-5">Transfer from Franka to UR5 with changed camera poses</h2>
+          <div class="columns is-multiline">
+  <!-- Video item for UR5e with Franka Gripper -->
+  <div class="column is-full">
+    <video poster="" id="fullbody" autoplay controls muted loop playsinline width="100%">
+      <source src="./static/videos/pysical-experiment/different-camera-view/franka-ur5-10cm-20d.mp4" type="video/mp4">
+    </video>
+    <p class="video-caption">Transfer from Franka to UR5 for the open-drawer and place-tiger tasks. We change 10cm translation and 20 degree of the camera pose.</p>
+  </div>
+  <!-- Video item for Kinova3 with Franka Gripper -->
+  <div class="column is-full">
+    <video poster="" id="shiba" autoplay controls muted loop playsinline width="100%">
+      <source src="./static/videos/pysical-experiment/different-camera-view/franka-ur5-25cm-30d.mp4" type="video/mp4">
+    </video>
+    <p class="video-caption">Transfer from Franka to UR5 for the open-drawer and place-tiger tasks. We significantly change 25cm translation and 35 degree of the camera pose.</p>
+  </div>
+  <!-- Video item for Kinova3 with Franka Gripper -->
+  <div class="column is-full">
+    <video poster="" id="shiba" autoplay controls muted loop playsinline width="100%">
+      <source src="./static/videos/pysical-experiment/different-camera-view/franka-ur5-moving-camera.mp4" type="video/mp4">
+    </video>
+    <p class="video-caption">Transfer from Franka to UR5 for the open-drawer and place-tiger tasks. We randomly change the camera poses. Our RoVi-Aug policy is very robust.</p>
+  </div>
+</div>
+
+<!-- Row for the Stack Task with Different Robot and Different Gripper -->
+<h2 class="title is-5">Transfer from UR5 to Franka with changed camera poses</h2>
+<div class="columns is-multiline">
+  <div class="column is-full">
+    <video poster="" id="toby-stack-ur5e" autoplay controls muted loop playsinline width="100%">
+      <source src="./static/videos/pysical-experiment/different-camera-view/ur5-franka-10cm-20d.mp4" type="video/mp4">
+    </video>
+    <p class="video-caption">Transfer from UR5 to Franka for the sweep-cloth and transport-tiger tasks. We change 10cm translation and 20 degree of the camera pose.</p>
+  </div>
+  <div class="column is-full">
+    <video poster="" id="coffee" autoplay controls muted loop playsinline width="100%">
+      <source src="./static/videos/pysical-experiment/different-camera-view/ur5-franka-25cm-35d.mp4" type="video/mp4">
+    </video>
+    <p class="video-caption">Transfer from UR5 to Franka for the sweep-cloth and transport-tiger tasks. We significantly change 25cm translation and 35 degree of the camera pose.</p>
+  </div>
+  <div class="column is-full">
+    <video poster="" id="coffee" autoplay controls muted loop playsinline width="100%">
+      <source src="./static/videos/pysical-experiment/different-camera-view/ur5-franka-moving-camera.mp4" type="video/mp4">
+    </video>
+    <p class="video-caption">Transfer from UR5 to Franka for the sweep-cloth and transport-tiger tasks. We randomly change the camera poses. Our RoVi-Aug policy is very robust</p>
+  </div>
+</div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop"> <!-- Wrap the entire content in is-max-desktop container -->
+      <h2 class="title is-4"> Results for Cross-skill-cross-robot and Finetuning Experiments</h2>
+        <div class="content has-text-justified">
+          <p>
+            To evaluate robot-skill cross-product, we combine the Tiger Place demonstration data from the Franka and Tiger Transport demonstration data from the UR5, as well as their robot-augmented UR5 and Franka versions, and train a multi-robot multi-task diffusion policy. From Table 5, we can see that the policy can successfully execute the two tasks on both robots. Additionally, we evaluate whether RoVi-Aug improves finetuning sample efficiency. From Table 6, we can see that after training Octo on the augmented OXE data, the policy has seen the synthetic target robots performing the tasks, accelerating downstream finetuning of similar tasks.
+          </p>
+        </div>
+
+        <div class="content has-text-centered">
+          <figure>
+            <img id="teaser" src="./static/images/cross-skill-cross-robot.png" alt="sim experiments Image" style="width: 100%;">
+            <figcaption>
+             Cross-skill-cross-robot experiment results and Octo Finetuning OXE experiment results
+            </figcaption>
+          </figure>
+        </div>
+</div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop"> <!-- Wrap the entire content in is-max-desktop container -->
+      <h2 class="title is-4"> Visualization for robot cross-painting and Novel-view synthesize </h2>
+        <div class="content has-text-centered">
+          <figure>
+            <img id="teaser" src="./static/images/augmentation_examples.png" alt="sim experiments Image" style="width: 100%;">
+            <figcaption>
+              We show the intermediate results of the robot cross-painting and the view augmentation results.
+            </figcaption>
+          </figure>
+        </div>
+</div>
+</section>
+
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre>@article{chen2024roviaug,
+      title={RoVi-Aug: Robot and Viewpoint Augmentation for Cross-Embodiment Robot Learning},
+      author={Lawrence Yunliang Chen, Chenfeng Xu, Karthik Dharmarajan, Zubair Irshad, Richard Cheng, Kurt Keutzer, Masayoshi Tomizuka, Quan Vuong, Ken Goldberg},
+      year={2024},
+      eprint={TODO},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO}
+}<code>
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <!-- <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>Website template borrowed from <a href="https://nerfies.github.io/">NeRFies</a> made by the amazing <a href="https://keunhong.com/">Keunhong Park</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
