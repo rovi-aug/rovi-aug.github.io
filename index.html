@@ -317,10 +317,10 @@
 
 <section class="hero teaser">
     <div class="container is-max-desktop"> <!-- Wrap the entire content in is-max-desktop container -->
-      <h2 class="title is-4"> Results for the Same Camera Pose</h2>
+      <h2 class="title is-4"><br>Results for the Same Camera Pose</h2>
         <div class="content has-text-justified">
           <p>
-            We first investigate the zero-shot transfer between Franka and UR5 given the same camera pose. The performance and the visualization results are shown below.
+            We first investigate the zero-shot transfer between Franka and UR5 given the same camera pose. The performance and example rollout videos are shown below.
           </p>
         </div>
 
@@ -384,9 +384,8 @@
           <p class="video-caption">Target Result (UR5 robot)</p>
         </div>
      </div>
-    </section>
 
-      <section class="hero is-light is-small">
+      
         <div class="hero-body">
           <div class="container is-max-desktop"> <!-- Wrap the entire content in is-max-desktop container -->
             <h2 class="title is-4"> Results for Different Camera Poses</h2>
@@ -408,53 +407,53 @@
            <!-- Row for the Lift Task with Different Robot and Same Gripper -->
           <h2 class="title is-5">Transfer from Franka to UR5 with changed camera poses</h2>
           <div class="columns is-multiline">
-  <!-- Video item for UR5e with Franka Gripper -->
-  <div class="column is-full">
-    <video poster="" id="fullbody" autoplay controls muted loop playsinline width="100%">
-      <source src="./static/videos/pysical-experiment/different-camera-view/franka-ur5-10cm-20d.mp4" type="video/mp4">
-    </video>
-    <p class="video-caption">Transfer from Franka to UR5 for the open-drawer and place-tiger tasks. We change 10cm translation and 20 degree of the camera pose.</p>
-  </div>
-  <!-- Video item for Kinova3 with Franka Gripper -->
-  <div class="column is-full">
-    <video poster="" id="shiba" autoplay controls muted loop playsinline width="100%">
-      <source src="./static/videos/pysical-experiment/different-camera-view/franka-ur5-25cm-30d.mp4" type="video/mp4">
-    </video>
-    <p class="video-caption">Transfer from Franka to UR5 for the open-drawer and place-tiger tasks. We significantly change 25cm translation and 35 degree of the camera pose.</p>
-  </div>
-  <!-- Video item for Kinova3 with Franka Gripper -->
-  <div class="column is-full">
-    <video poster="" id="shiba" autoplay controls muted loop playsinline width="100%">
-      <source src="./static/videos/pysical-experiment/different-camera-view/franka-ur5-moving-camera.mp4" type="video/mp4">
-    </video>
-    <p class="video-caption">Transfer from Franka to UR5 for the open-drawer and place-tiger tasks. We randomly change the camera poses. Our RoVi-Aug policy is very robust.</p>
-  </div>
-</div>
+          <!-- Video item for UR5e with Franka Gripper -->
+          <div class="column is-full">
+            <video poster="" id="fullbody" autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/pysical-experiment/different-camera-view/franka-ur5-10cm-20d.mp4" type="video/mp4">
+            </video>
+            <p class="video-caption">Transfer from Franka to UR5 for the open-drawer and place-tiger tasks. There is camera pose change of 10cm in translation and 20 degrees in rotation.</p>
+          </div>
+          <!-- Video item for Kinova3 with Franka Gripper -->
+          <div class="column is-full">
+            <video poster="" id="shiba" autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/pysical-experiment/different-camera-view/franka-ur5-25cm-30d.mp4" type="video/mp4">
+            </video>
+            <p class="video-caption">Transfer from Franka to UR5 for the open-drawer and place-tiger tasks. There is camera pose change of 25cm in translation and 35 degrees in rotation.</p>
+          </div>
+          <!-- Video item for Kinova3 with Franka Gripper -->
+          <div class="column is-full">
+            <video poster="" id="shiba" autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/pysical-experiment/different-camera-view/franka-ur5-moving-camera.mp4" type="video/mp4">
+            </video>
+            <p class="video-caption">Transfer from Franka to UR5 for the open-drawer and place-tiger tasks. We move the camera during the trajectory and our policy trained with RoVi-Aug is still robust.</p>
+          </div>
+        </div>
 
-<!-- Row for the Stack Task with Different Robot and Different Gripper -->
-<h2 class="title is-5">Transfer from UR5 to Franka with changed camera poses</h2>
-<div class="columns is-multiline">
-  <div class="column is-full">
-    <video poster="" id="toby-stack-ur5e" autoplay controls muted loop playsinline width="100%">
-      <source src="./static/videos/pysical-experiment/different-camera-view/ur5-franka-10cm-20d.mp4" type="video/mp4">
-    </video>
-    <p class="video-caption">Transfer from UR5 to Franka for the sweep-cloth and transport-tiger tasks. We change 10cm translation and 20 degree of the camera pose.</p>
-  </div>
-  <div class="column is-full">
-    <video poster="" id="coffee" autoplay controls muted loop playsinline width="100%">
-      <source src="./static/videos/pysical-experiment/different-camera-view/ur5-franka-25cm-35d.mp4" type="video/mp4">
-    </video>
-    <p class="video-caption">Transfer from UR5 to Franka for the sweep-cloth and transport-tiger tasks. We significantly change 25cm translation and 35 degree of the camera pose.</p>
-  </div>
-  <div class="column is-full">
-    <video poster="" id="coffee" autoplay controls muted loop playsinline width="100%">
-      <source src="./static/videos/pysical-experiment/different-camera-view/ur5-franka-moving-camera.mp4" type="video/mp4">
-    </video>
-    <p class="video-caption">Transfer from UR5 to Franka for the sweep-cloth and transport-tiger tasks. We randomly change the camera poses. Our RoVi-Aug policy is very robust</p>
-  </div>
-</section>
+        <!-- Row for the Stack Task with Different Robot and Different Gripper -->
+        <h2 class="title is-5">Transfer from UR5 to Franka with changed camera poses</h2>
+        <div class="columns is-multiline">
+          <div class="column is-full">
+            <video poster="" id="toby-stack-ur5e" autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/pysical-experiment/different-camera-view/ur5-franka-10cm-20d.mp4" type="video/mp4">
+            </video>
+            <p class="video-caption">Transfer from UR5 to Franka for the sweep-cloth and transport-tiger tasks. There is camera pose change of 10cm in translation and 20 degrees in rotation.</p>
+          </div>
+          <div class="column is-full">
+            <video poster="" id="coffee" autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/pysical-experiment/different-camera-view/ur5-franka-25cm-35d.mp4" type="video/mp4">
+            </video>
+            <p class="video-caption">Transfer from UR5 to Franka for the sweep-cloth and transport-tiger tasks. There is camera pose change of 25cm in translation and 35 degrees in rotation.</p>
+          </div>
+          <div class="column is-full">
+            <video poster="" id="coffee" autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/pysical-experiment/different-camera-view/ur5-franka-moving-camera.mp4" type="video/mp4">
+            </video>
+            <p class="video-caption">Transfer from UR5 to Franka for the sweep-cloth and transport-tiger tasks. We move the camera during the trajectory and our policy trained with RoVi-Aug is still robust.</p>
+          </div>
 
-
+    <div class="hero-body">
+      <div class="container is-max-desktop"> <!-- Wrap the entire content in is-max-desktop container -->
       <h2 class="title is-4"> Results for Cross-skill-cross-robot and Finetuning Experiments</h2>
         <div class="content has-text-justified">
           <p>
@@ -466,11 +465,12 @@
           <figure>
             <img id="teaser" src="./static/images/cross-skill-cross-robot.png" alt="sim experiments Image" style="width: 100%;">
             <figcaption>
-             Cross-skill-cross-robot experiment results and Octo Finetuning OXE experiment results
+             Cross-skill-cross-robot experiment results and Octo Finetuning OXE experiment results.
             </figcaption>
           </figure>
         </div>
-
+      </div>
+    </div>
 
 </section>
 
