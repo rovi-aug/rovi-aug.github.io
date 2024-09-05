@@ -232,12 +232,11 @@
 
 
 
-<section class="hero teaser">
+<section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <!-- A Simulation Study -->
-        <h2 class="title is-3">RoVi-Aug Pipeline</h2>
+        <h2 class="title is-3"><br>RoVi-Aug Pipeline</h2>
         <div class="hero-body">
           <figure>
             <img id="teaser" src="./static/images/Method-cropped-2.png" alt="robots image" style="width: 100%;">
@@ -270,7 +269,7 @@
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Physical Experiments</h2>
+    <h2 class="title is-3"><br>Physical Experiments</h2>
     <div class="content has-text-justified">
       <p>
         We design experiments to answer the following research questions: (1) Can robot augmentation (Ro-Aug) effectively bridge the visual gap between the robots? (2) Can viewpoint augmentation (Vi-Aug) improve policy robustness to camera pose changes? (3) Can policies trained with RoVi-Aug be successfully deployed zero-shot on a different robot with camera changes? (4) Does RoVi-Aug enable multi-robot multi-task training and better facilitate transfer between robots and skills?
@@ -316,8 +315,7 @@
   }
 </style>
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
+<section class="hero teaser">
     <div class="container is-max-desktop"> <!-- Wrap the entire content in is-max-desktop container -->
       <h2 class="title is-4"> Results for the Same Camera Pose</h2>
         <div class="content has-text-justified">
@@ -454,13 +452,9 @@
     </video>
     <p class="video-caption">Transfer from UR5 to Franka for the sweep-cloth and transport-tiger tasks. We randomly change the camera poses. Our RoVi-Aug policy is very robust</p>
   </div>
-</div>
 </section>
 
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop"> <!-- Wrap the entire content in is-max-desktop container -->
       <h2 class="title is-4"> Results for Cross-skill-cross-robot and Finetuning Experiments</h2>
         <div class="content has-text-justified">
           <p>
@@ -476,9 +470,6 @@
             </figcaption>
           </figure>
         </div>
-</div>
-</section>
-
 
 
 </section>
@@ -488,15 +479,13 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre>@article{chen2024roviaug,
+    <pre><code>@inproceedings{chen2024roviaug,
       title={RoVi-Aug: Robot and Viewpoint Augmentation for Cross-Embodiment Robot Learning},
-      author={Lawrence Yunliang Chen, Chenfeng Xu, Karthik Dharmarajan, Zubair Irshad, Richard Cheng, Kurt Keutzer, Masayoshi Tomizuka, Quan Vuong, Ken Goldberg},
-      year={2024},
-      eprint={TODO},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO}
-}<code>
-</code></pre>
+      author={Lawrence Yunliang Chen and Chenfeng Xu and Karthik Dharmarajan and Zubair Irshad and Richard Cheng and Kurt Keutzer and Masayoshi Tomizuka and Quan Vuong and Ken Goldberg},
+      booktitle = {Conference on Robot Learning (CoRL)},
+      address  = {Munich, Germany},
+      year = {2024},
+}</code></pre>
   </div>
 </section>
 
